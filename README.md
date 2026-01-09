@@ -127,9 +127,8 @@ Importiert eine SQL Dumpdatei
 mysql -u user -p
 name < dump.sql
 ```
+</br>
 
-</br>
-</br>
 # Definitionen Erklärt
 
 identifier = Name für DB/Tabelle/Spalte
