@@ -17,77 +17,76 @@ MySQL ist ein weit verbreitetes, leistungsfähiges relationales Datenbankmanagem
 - Datenanalyse und Reporting
 - Microservices und moderne Cloud‑Architekturen
 
-Create Database if not exist
+Erstellt Datenbank falls diese nicht existiert
 ```sql
 CREATE DATABASE IF NOT EXISTS Test;
 ```
 
-Drop Database
+Löscht Datenbank
 ```sql
-DROP DATABASE Test;
+DROP DATABASE name;
 ```
 
-Table creation
+Erstellt Tabelle
 ```sql
-CREATE TABLE test (
+CREATE TABLE name (
 id INT PRIMARY KEY AUTO_INCREMENT,
 `name` VARCHAR(100),
 email VARCHAR(100)
 );
 ```
 
-Show all existing tables
+Zeigt alle existierenden Tabellen
 ```sql
 SHOW TABLES;
 ```
 
-Show column name, type and Preferences
+Zeigt Spalten Name, typ und Eigenschaften
 ```sql
 DESCRIBE name;
 ```
 
-Add new column to table "test"
+Fügt neue Spalte zur Tabelle "Name" hinzu
 ```sql
-ALTER TABLE test
+ALTER TABLE name
 ADD COLUMN test DATATYPE;
 ```
 
-Removes the column test from the table name.
+Löscht die Spalte "test" von der Tabelle Name
 ```sql
-ALTER TABLE test
+ALTER TABLE name
 DROP COLUMN test;
 ```
 
-Delete the table test
+Löscht die Tabelle name
 ```sql
-DROP TABLE test;
+DROP TABLE name;
 ```
 
-Deletes all rows of a table but keeps the structure
+Löscht alle Zeilen einer Tabelle aber behält die Struktur
 ```sql
-TRUNCATE TABLE test;
+TRUNCATE TABLE name;
 ```
-
-Selects all rows and columns of a table
+Wählt alle Zeilen einer Spalte aus
 ```sql
 SELECT * FROM test;
 ```
 
-Selects specific columns and filters rows according conditions
+Wählt bestimmte Spalten aus und filtert die Zeilen nach Konditionen
 ```sql
 SELECT col1, col2 FROM
 name WHERE
 condition;
 ```
 
-Changes column value which fullfills condition
+Ändert den Spalten Wert bei erfüllung bestimmter Konditionen
 ```sql
 UPDATE name SET
 col = val WHERE
 condition;
 ```
 
-Deletes rows from table which fullfills conditions
+Löscht alle Zeilen einer Tabelle bei erfüllung bestimmter Konditionen
 ```sql
 DELETE FROM test
 WHERE condition;
