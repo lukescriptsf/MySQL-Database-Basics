@@ -128,7 +128,7 @@ mysql -u user -p
 name < dump.sql
 ```
 
-#Definitionen Erklärt
+# Definitionen Erklärt
 
 identifier = Name für DB/Tabelle/Spalte
 ```sql
