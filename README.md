@@ -178,4 +178,53 @@ email VARCHAR(255) DEFAULT NULL,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
+</br>
 
+# Beispiel Aufabe mit Angestellten
+Erstelle einen Datensatz
+
+```sql
+CREATE DATABASE IF NOT EXISTS aufgabe_1;
+```
+
+Erstelle eine Tabelle "employee" mit den folgenden Datensätzen
+- Vorname, Nachname, Adresse, Stadt, Adresse2
+```sql
+USE aufgabe_1;
+
+CREATE TABLE employee (
+id INT PRIMARY KEY AUTO_INCREMENT,
+`firstName` VARCHAR(100),
+`lastName` VARCHAR(100),
+`address` VARCHAR(100),
+`city` VARCHAR(100),
+`address2` VARCHAR(100)
+);
+```
+
+Füge 2-3 vollständigen Datensätze in die Mitarbeitertabelle ein und überprüfe ihre Richtigkeit
+```sql
+INSERT INTO employee (firstName, lastName, address, city, address2)
+VALUES
+('Anna', 'Meier', 'Musterstrasse 2', 'Bern', 'Post 1'),
+('Max', 'Müller', 'Hausstrasse 3', 'Bern', 'Post 17');
+```
+
+Füge noch ein paar Datensätze hinzu, wobei du ein oder zwei Felder leer lässt
+```sql
+INSERT INTO employee (fistName, lastName, address, city, address2)
+VALUES
+('Anna', 'Meier', NULL, 'Bern', NULL),
+('Max', NULL, 'Hausstrasse 3', NULL, 'Post 17');
+```
+
+Liste die Datensätze auf
+```sql
+SELECT * FROM employee;
+```
+
+Lösche die doppelten Datensätze
+```sql
+DELETE FROM employee WHERE id = 3;
+DELETE FROM employee WHERE id = 4;
+```
