@@ -181,7 +181,7 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 </br>
 
 # Beispiel Aufabe mit Angestellten
-Erstelle einen Datensatz
+Erstelle eine Datenbank
 
 ```sql
 CREATE DATABASE IF NOT EXISTS aufgabe_1;
