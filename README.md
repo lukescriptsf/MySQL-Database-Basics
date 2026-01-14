@@ -127,6 +127,23 @@ Importiert eine SQL Dumpdatei
 mysql -u user -p
 name < dump.sql
 ```
+
+LIKE + UND Kombination um Daten zu filtern und auszugeben
+```sql
+SELECT *
+FROM test
+WHERE firstname LIKE '%ben%'
+  AND city = 'Bern';
+```
+
+LIKE + OR kombination um Daten zu filtern und auszugeben
+```sql
+SELECT *
+FROM employeeSNF
+WHERE firstname LIKE '%ben%'
+  OR lastname LIKE '%mei%';
+```
+
 </br>
 
 # Definitionen Erklärt
